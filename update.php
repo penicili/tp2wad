@@ -2,20 +2,12 @@
 include 'connect.php';
 
 if (isset($_POST['update'])) {
-    $id = $_GET['id'];
-    $judul = $_POST['judul'];
-    $penulis = $_POST['penulis'];
-    $tahun_terbit = $_POST['tahun_terbit'];    
+    // Tangkap data id, judul, penulis, dan tahun_terbit dari form
+ 
 
+    // Buat query untuk mengupdate data buku berdasarkan id
 
-    $query = "UPDATE tb_buku SET
-        judul = '$judul',
-        penulis = '$penulis',
-        tahun_terbit = '$tahun_terbit'
-        WHERE id = '$id'
-    ";
-
-    mysqli_query($conn, $query);
+    // Jalankan query yang telah dibuat dengan $conn
 
     if (mysqli_affected_rows($conn) > 0) {
         header("location: katalog_buku.php");

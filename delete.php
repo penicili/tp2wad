@@ -2,10 +2,11 @@
 include 'connect.php';
 
 if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $query = "DELETE FROM tb_buku WHERE id = '$id'";
+    // Tangkap id dengan metode GET
 
-    mysqli_query($conn, $query);
+    // Buat query untuk menghapus data buku berdasarkan id
+
+    // Jalankan query yang telah dibuat dengan $conn
 
     if (mysqli_affected_rows($conn) > 0) {
         header("location: katalog_buku.php");
