@@ -2,14 +2,14 @@
 include 'connect.php';
 
 if (isset($_POST['create'])) {
-    //  Tangkap data judul, penulis, dan tahun_terbit dari form
+    //  Capture data title, writer, and publishing_year from the form
 
-    // Query kan data judul, penulis, dan tahun_terbit ke dalam tabel tb_buku
+    // Query to insert title, writer, and publishing_year data into the tb_buku table
 
-    // Jalankan query yang telah dibuat dengan $conn
+    // Run the query that has been created with $conn
 
     if (mysqli_affected_rows($conn) > 0) {
-        header("location: katalog_buku.php");
+        header("location: book_catalogue.php");
     } else {
         echo "<script>alert('Data gagal ditambahkan');</script>";
     }

@@ -14,7 +14,7 @@
      <div class="container">
         <div class="row">
             <div class="col-md-12 text-center p-5 hero-text">
-                <h1>Selamat Datang di EAD Library</h1>
+                <h1>Welcome to EAD Library</h1>
                 <br>
                 <img src="logo-ead.png" alt="EAD Library" width="800px">
                 <br>

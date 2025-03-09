@@ -1,12 +1,15 @@
 <?php
 include('connect.php');
 // Tangkap id yang dikirimkan melalui GET
+// Capture the id sent via GET
 
 // Buat query untuk mengambil data buku dari tabel tb_buku sesuai id yang ditangkap
+// Create a query to retrieve book data from the tb_buku table according to the captured id
 
 $data = mysqli_query($conn,$query);
 
-// Buat variabel $buku untuk menyimpan data buku yang telah diambil
+// Buat variabel $book untuk menyimpan data buku yang telah diambil
+// Create a $book variable to store the retrieved book data
 
 ?>
 
@@ -24,23 +27,23 @@ $data = mysqli_query($conn,$query);
     <?php include('navbar.php');?>
     <center>
         <div class="container">
-            <h1>Ubah Detail Buku</h1>
+            <h1>Change Book Details</h1>
             <div class="col-md-4 p-3">
                 <div class="card">
                     <div class="card-body">
-                        <!-- sesuaikan action update agar menggunakan id yang telah ditangkap -->
+                        <!-- change the action="update.php" to use the captured id -->
                         <form action="update.php" method="POST" enctype="multipart/form-data">
                             <div class="form-floating mb-3">
-                                <input type="string" class="form-control" name="judul" id="judul" value="<?=$buku['judul']?>" required>
-                                <label for="judul">Judul</label>
+                                <input type="string" class="form-control" name="title" id="title" value="<?=$book['title']?>" required>
+                                <label for="title">title</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="string" class="form-control" name="penulis" id="penulis" value="<?=$buku['penulis']?>">
-                                <label for="penulis">Penulis</label>
+                                <input type="string" class="form-control" name="writer" id="writer" value="<?=$book['writer']?>">
+                                <label for="writer">writer</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="string" class="form-control" name="tahun_terbit" id="tahun_terbit" value="<?=$buku['tahun_terbit']?>" required>
-                                <label for="tahun_terbit">Tahun Terbit</label>
+                                <input type="string" class="form-control" name="publishing_year" id="publishing_year" value="<?=$book['publishing_year']?>" required>
+                                <label for="publishing_year">Publishing Year</label>
                             </div>
                             <button type="submit" name="update" id="update" class="btn btn-primary mb-3 mt-3 w-100">Ubah</button>
                         </form>

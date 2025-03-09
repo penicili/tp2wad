@@ -12,25 +12,25 @@
     <?php include ("navbar.php") ?>
     <center>
         <div class="container">
-            <h1>Tambah Buku</h1>
+            <h1>Add Books</h1>
             <div class="col-md-4 p-3">
                 <div class="card">
                     <div class="card-body">
                         <form action="create.php" method="POST" enctype="multipart/form-data">
                             <div class="form-floating mb-3">
-                                <!-- Tambahkan label untuk Judul -->
-                                <!-- Sesuaikan Field untuk Judul -->
+                                <!-- Create label for title -->
+                                <!-- Change the id and name for title -->
                                 <input type="string" class="form-control" name="" id="" required>
                             </div>
                             <div class="form-floating mb-3">
-                                <!-- Tambahkan label untuk Penulis -->
-                                <!-- Sesuaikan Field untuk Penulis -->
+                                <!-- Create label for writer -->
+                                <!-- Change the id and name for writer -->
                                 <input type="string" class="form-control" name="" id="" required>
                             </div>
                             <div class="form-floating mb-3">
-                                <!-- Tambahkan label untuk Tahun terbit -->
-                                <!-- Sesuaikan Field untuk Tahun terbit -->
-                                <input type="string" class="form-control" name="tahun_terbit" id="tahun_terbit" required>
+                                <!-- Create label for publishing_year -->
+                                <!-- Change the id and name for publishing_year -->
+                                <input type="string" class="form-control" name="" id="" required>
                             </div>
 
                             <button type="submit" name="create" id="create" class="btn btn-primary mb-3 mt-3 w-100">Tambah</button>
