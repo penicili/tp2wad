@@ -1,8 +1,7 @@
 <?php
 include 'connect.php';
 
-// Buat query untuk mengambil data buku dari tabel tb_buku
-
+$query = "SELECT * FROM tb_buku";
 $result = mysqli_query($conn, $query);
 
 $bukus = [];
@@ -42,11 +41,10 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <?php endif;?>
                 <?php foreach ($bukus as $buku) : ?>
                     <tr>
-                        <!-- sesuaikan setiap kolom untuk id, judul, penulis dan tahun terbit -->
-                        <td><?= "id"?></td>
-                        <td><?= "judul"?></td>
-                        <td><?= "penulis"?></td>
-                        <td><?= "tahun terbit"?></td>
+                        <td><?= $buku['id']?></td>
+                        <td><?= $buku['judul']?></td>
+                        <td><?= $buku['penulis']?></td>
+                        <td><?= $buku['tahun_terbit']?></td>
                         <td>
                             <a href="edit_buku.php?id=<?=$buku['id']?>" class="btn btn-primary">Edit</a>
                             <a href="delete.php?id=<?=$buku['id']?>" class="btn btn-danger" >Delete</a>

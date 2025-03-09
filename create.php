@@ -2,11 +2,14 @@
 include 'connect.php';
 
 if (isset($_POST['create'])) {
-    //  Tangkap data judul, penulis, dan tahun_terbit dari form
+    $judul = $_POST['judul'];
+    $penulis = $_POST['penulis'];
+    $tahun_terbit = $_POST['tahun_terbit'];    
 
-    // Query kan data judul, penulis, dan tahun_terbit ke dalam tabel tb_buku
 
-    // Jalankan query yang telah dibuat dengan $conn
+    $query = "INSERT INTO tb_buku (judul, penulis, tahun_terbit) VALUES ('$judul', '$penulis', '$tahun_terbit')";
+
+    mysqli_query($conn, $query);
 
     if (mysqli_affected_rows($conn) > 0) {
         header("location: katalog_buku.php");

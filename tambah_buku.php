@@ -18,19 +18,16 @@
                     <div class="card-body">
                         <form action="create.php" method="POST" enctype="multipart/form-data">
                             <div class="form-floating mb-3">
-                                <!-- Tambahkan label untuk Judul -->
-                                <!-- Sesuaikan Field untuk Judul -->
-                                <input type="string" class="form-control" name="" id="" required>
+                                <input type="string" class="form-control" name="judul" id="judul" required>
+                                <label for="judul">Judul</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <!-- Tambahkan label untuk Penulis -->
-                                <!-- Sesuaikan Field untuk Penulis -->
-                                <input type="string" class="form-control" name="" id="" required>
+                                <input type="string" class="form-control" name="penulis" id="penulis" required>
+                                <label for="penulis">Penulis</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <!-- Tambahkan label untuk Tahun terbit -->
-                                <!-- Sesuaikan Field untuk Tahun terbit -->
                                 <input type="string" class="form-control" name="tahun_terbit" id="tahun_terbit" required>
+                                <label for="tahun_terbit">Tahun Terbit</label>
                             </div>
 
                             <button type="submit" name="create" id="create" class="btn btn-primary mb-3 mt-3 w-100">Tambah</button>

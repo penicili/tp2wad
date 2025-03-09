@@ -1,13 +1,12 @@
 <?php
 include('connect.php');
-// Tangkap id yang dikirimkan melalui GET
+$id = $_GET['id'];
 
-// Buat query untuk mengambil data buku dari tabel tb_buku sesuai id yang ditangkap
+$query = "SELECT * FROM tb_buku WHERE id=$id";
 
 $data = mysqli_query($conn,$query);
 
-// Buat variabel $buku untuk menyimpan data buku yang telah diambil
-
+$buku = mysqli_fetch_assoc($data);
 ?>
 
 <!DOCTYPE html>
@@ -28,8 +27,7 @@ $data = mysqli_query($conn,$query);
             <div class="col-md-4 p-3">
                 <div class="card">
                     <div class="card-body">
-                        <!-- sesuaikan action update agar menggunakan id yang telah ditangkap -->
-                        <form action="update.php" method="POST" enctype="multipart/form-data">
+                        <form action="update.php?id=<?=$id?>" method="POST" enctype="multipart/form-data">
                             <div class="form-floating mb-3">
                                 <input type="string" class="form-control" name="judul" id="judul" value="<?=$buku['judul']?>" required>
                                 <label for="judul">Judul</label>
