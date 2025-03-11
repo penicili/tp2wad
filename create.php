@@ -1,14 +1,21 @@
 <?php
 include 'connect.php';
 
+// ==================1==================
+// If statement untuk mengecek POST request dari form
 if (isset($_POST['create'])) {
     $judul = $_POST['judul'];
     $penulis = $_POST['penulis'];
     $tahun_terbit = $_POST['tahun_terbit'];    
-
-
+    
+    
+// ==================2==================
+// Definisikan $query untuk melakukan koneksi ke database
     $query = "INSERT INTO tb_buku (judul, penulis, tahun_terbit) VALUES ('$judul', '$penulis', '$tahun_terbit')";
 
+
+// ==================3==================
+// Eksekusi query
     mysqli_query($conn, $query);
 
     if (mysqli_affected_rows($conn) > 0) {

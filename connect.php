@@ -1,19 +1,16 @@
 <?php
-// host
+// ==================1==================
+// Definisikan variabel2 yang akan digunakan untuk melakukan koneksi ke database
 $host = "localhost";
-// username
 $username = "root";
-// password
 $password = "";
-// database
 $database = "db_perpustakaan";
-// port
 $port = 3308;
 
-// conn
+// ==================2==================
+// Definisikan $conn untuk melakukan koneksi ke database 
 $conn = mysqli_connect($host, $username, $password, $database, $port);
 
-// check conn
 if (!$conn) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }

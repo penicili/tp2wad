@@ -1,11 +1,17 @@
 <?php
 include('connect.php');
-$id = $_GET['id'];
+// ==================1==================
+// If statement untuk menyimpan variabel $id dari GET request
+if (isset($_GET['id'])){
+    $id = $_GET['id'];
+}
 
+// ==================2==================
+// Definisikan $query untuk mengambil data buku berdasarkan id
 $query = "SELECT * FROM tb_buku WHERE id=$id";
 
-$data = mysqli_query($conn,$query);
 
+$data = mysqli_query($conn,$query);
 $buku = mysqli_fetch_assoc($data);
 ?>
 

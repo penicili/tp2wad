@@ -18,14 +18,20 @@
                     <div class="card-body">
                         <form action="create.php" method="POST" enctype="multipart/form-data">
                             <div class="form-floating mb-3">
+                                <!--  ==================1==================  -->
+                                <!--  Buatlah input untuk judul yang harus diisi; dengan label  -->
                                 <input type="string" class="form-control" name="judul" id="judul" required>
                                 <label for="judul">Judul</label>
                             </div>
                             <div class="form-floating mb-3">
+                                <!--  ==================2==================  -->
+                                <!--  Buatlah input untuk penulis yang harus diisi; dengan label  -->
                                 <input type="string" class="form-control" name="penulis" id="penulis" required>
                                 <label for="penulis">Penulis</label>
                             </div>
                             <div class="form-floating mb-3">
+                                <!--  ==================3==================  -->
+                                <!--  Buatlah input untuk tahun_terbit yang harus diisi; dengan label  -->
                                 <input type="string" class="form-control" name="tahun_terbit" id="tahun_terbit" required>
                                 <label for="tahun_terbit">Tahun Terbit</label>
                             </div>

@@ -1,6 +1,8 @@
 <?php
 include 'connect.php';
 
+// ==================1==================
+// Definisikan query untuk mengambil semua data buku
 $query = "SELECT * FROM tb_buku";
 $result = mysqli_query($conn, $query);
 
@@ -41,6 +43,9 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <?php endif;?>
                 <?php foreach ($bukus as $buku) : ?>
                     <tr>
+<!-- ==================2================== -->
+<!-- Buatlah kolom untuk masing-masing variabel pada $buku -->
+
                         <td><?= $buku['id']?></td>
                         <td><?= $buku['judul']?></td>
                         <td><?= $buku['penulis']?></td>
