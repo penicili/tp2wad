@@ -43,13 +43,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <?php endif;?>
                 <?php foreach ($bukus as $buku) : ?>
                     <tr>
-<!-- ==================2================== -->
-<!-- Buatlah kolom untuk masing-masing variabel pada $buku -->
-
-                        <td><?= $buku['id']?></td>
-                        <td><?= $buku['judul']?></td>
-                        <td><?= $buku['penulis']?></td>
-                        <td><?= $buku['tahun_terbit']?></td>
+                        <!-- ==================2================== -->
+                        <!-- Buatlah kolom untuk masing-masing variabel pada $buku -->
                         <td>
                             <a href="edit_buku.php?id=<?=$buku['id']?>" class="btn btn-primary">Edit</a>
                             <a href="delete.php?id=<?=$buku['id']?>" class="btn btn-danger" >Delete</a>
