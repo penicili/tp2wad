@@ -11,10 +11,10 @@
                     <a class="nav-link" href="home.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="katalog_buku.php">Katalog Buku</a>
+                    <a class="nav-link" href="catalog_book.php">Book Catalog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="tambah_buku.php">Tambah Buku</a>
+                    <a class="nav-link" href="add_book.php">Add BOok</a>
                 </li>
             </ul>
         </div>

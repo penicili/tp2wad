@@ -14,7 +14,7 @@ if (isset($_POST['update'])) {
     mysqli_query($conn, $query);
 
     if (mysqli_affected_rows($conn) > 0) {
-        header("location: katalog_buku.php");
+        header("location: catalog_book.php");
     } else {
         echo "<script>alert('Data gagal ditambahkan');</script>";
     }

@@ -12,7 +12,7 @@
     <?php include ("navbar.php") ?>
     <center>
         <div class="container">
-            <h1>Tambah Buku</h1>
+            <h1>Add Book</h1>
             <div class="col-md-4 p-3">
                 <div class="card">
                     <div class="card-body">
@@ -20,19 +20,22 @@
                             <div class="form-floating mb-3">
                                 <!--  ==================1==================  -->
                                 <!--  Buatlah input untuk judul yang harus diisi; dengan label  -->
+                                <!-- Create input for title, with label -->
                                 <input type="string" class="form-control" name="" id="" required>
                                 <label for=""></label>
                             </div>
                             <div class="form-floating mb-3">
                                 <!--  ==================2==================  -->
                                 <!--  Buatlah input untuk penulis yang harus diisi; dengan label  -->
+                                <!-- Create input for writer, with label -->
                                 <input type="string" class="form-control" name="" id="" required>
                                 <label for=""></label>
                             </div>
                             <div class="form-floating mb-3">
                                 <!--  ==================3==================  -->
                                 <!--  Buatlah input untuk tahun_terbit yang harus diisi; dengan label  -->
-                                <input type="string" class="form-control" name="tahun_terbit" id="" required>
+                                <!-- Create input for publishing_year, with label -->
+                                <input type="string" class="form-control" name="" id="" required>
                                 <label for=""></label>
                             </div>
 

@@ -1,9 +1,9 @@
 <?php
 // ==================1==================
-// Definisikan variabel2 yang akan digunakan untuk melakukan koneksi ke database
-
+// Define variables to connect to the database
 
 // ==================2==================
+// Define $conn to connect to the database
 // Definisikan $conn untuk melakukan koneksi ke database 
 
 if (!$conn) {

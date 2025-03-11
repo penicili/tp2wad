@@ -2,13 +2,13 @@
 include 'connect.php';
 
 // ==================1==================
-// Definisikan query untuk mengambil semua data buku
-$query = "SELECT * FROM tb_buku";
+// Definisikan query untuk mengambil semua data book
+// Define the query to get all book data
 $result = mysqli_query($conn, $query);
 
-$bukus = [];
+$books = [];
 while ($row = mysqli_fetch_assoc($result)) {
-    $bukus[] = $row;
+    $books[] = $row;
 }
 ?>
 
@@ -17,37 +17,38 @@ while ($row = mysqli_fetch_assoc($result)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Buku</title>
+    <title>Book Catalog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <?php include 'navbar.php'; ?>
     <div class="container mt-5">
-        <h1>Katalog Buku</h1>
+        <h1>book Catalog</h1>
         <table class="table table-bordered">
             <thead>
                 <tr>
                   <th>No</th>
-                  <th>Judul</th>
-                  <th>Penulis</th>
-                  <th>Tahun</th>
-                  <th>Aksi</th>
+                  <th>Title</th>
+                  <th>Writer</th>
+                  <th>Year</th>
+                  <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <?php if (count($bukus) == 0) : ?>
+                <?php if (count($books) == 0) : ?>
                     <tr>
-                        <th colspan="7" class="text-center">TIDAK ADA DATA DALAM KATALOG</th>
+                        <th colspan="7" class="text-center">NO DATA</th>
                     </tr>
                 <?php endif;?>
-                <?php foreach ($bukus as $buku) : ?>
+                <?php foreach ($books as $book) : ?>
                     <tr>
                         <!-- ==================2================== -->
-                        <!-- Buatlah kolom untuk masing-masing variabel pada $buku -->
+                        <!-- Buatlah kolom untuk masing-masing variabel pada $book -->
+                        <!-- Create collumns for each variable in $book -->
                         <td>
-                            <a href="edit_buku.php?id=<?=$buku['id']?>" class="btn btn-primary">Edit</a>
-                            <a href="delete.php?id=<?=$buku['id']?>" class="btn btn-danger" >Delete</a>
+                            <a href="edit_book.php?id=<?=$book['id']?>" class="btn btn-primary">Edit</a>
+                            <a href="delete.php?id=<?=$book['id']?>" class="btn btn-danger" >Delete</a>
                         </td>
                     </tr>
                 <?php endforeach?>

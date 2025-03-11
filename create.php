@@ -2,8 +2,8 @@
 include 'connect.php';
 
 // ==================1==================
-// If statement untuk mengecek POST request dari form
-// Lalu definisikan variabel-variabel untuk menyimpan data yang dikirim dari POST
+// Definisikan variabel-variabel untuk menyimpan data yang dikirim dari POST
+// Save the data sent from the POST request to variables
 if (isset($_POST['create'])) {
  
     
@@ -16,7 +16,7 @@ if (isset($_POST['create'])) {
     // Eksekusi query
 
     if (mysqli_affected_rows($conn) > 0) {
-        header("location: katalog_buku.php");
+        header("location: catalog_book.php");
     } else {
         echo "<script>alert('Data gagal ditambahkan');</script>";
     }
